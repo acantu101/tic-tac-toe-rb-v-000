@@ -130,8 +130,13 @@ end
 def winner(board)
 if won?(board)
   combo = won?(board)
+
   #binding.pry
 return board[combo[0]]
+
+  binding.pry
+  return board[combo[0]]
+
 end
 end
 
@@ -150,8 +155,14 @@ end
 def play(board)
 turn(board) until over?(board)
    if won?(board)
+
      puts "Congratulations #{winner(board)}!"
   elsif draw?(board)
   puts "Cat's Game!"
+
+     puts "Congratulations #{winner(board)}"
+  elsif draw?(board)
+  puts "There has been a draw"
+
    end
  end
